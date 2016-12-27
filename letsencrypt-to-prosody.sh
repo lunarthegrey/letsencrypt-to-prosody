@@ -1,6 +1,6 @@
 #!/bin/bash
 
-letsencrypt="/etc/letsencrypt/live/something.com/"
+letsencrypt="/etc/letsencrypt/live/yoursite.com/"
 certs="/etc/prosody/certs/"
 prosody="/etc/prosody/"
 
