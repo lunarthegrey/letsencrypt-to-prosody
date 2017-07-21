@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR=( "domain.com" )
+DIR=( "domain1.com" "domain2.com" "domain3.com" )
 CERTS="/etc/prosody/certs/"
 PROSODY="/etc/prosody/"
 
