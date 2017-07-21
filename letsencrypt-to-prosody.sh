@@ -1,15 +1,17 @@
 #!/bin/bash
 
-letsencrypt="/etc/letsencrypt/live/yoursite.com/"
-certs="/etc/prosody/certs/"
-prosody="/etc/prosody/"
+DIR=( "domain.com" )
+CERTS="/etc/prosody/certs/"
+PROSODY="/etc/prosody/"
 
-   find "${letsencrypt}" -name "*.pem" | while read -r file
+   find "/etc/letsencrypt/live/${DIR}" -name "*.pem" | while read -r file
 
 do
 
-   cp "${file}" "${certs}"
-   chown -R prosody:prosody "${prosody}"
-   chmod -R 700 "${certs}"
+   cp "${file}" "/etc/prosody/certs/${DIR}/"
 
 done
+
+   chown -R prosody:prosody "${PROSODY}"
+   chmod -R 700 "${CERTS}"
+   prosodyctl reload
